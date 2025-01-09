@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'DM Sans',serif;
+    color: white;
+}
+::selection {
+    background-color: rgba(242, 163, 102,0.6);
+}
+.main-content {
+    background: url('../Images/landing.png')no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 10%;
+    padding-bottom: 200px;
+    box-shadow: 500px 200px 400px rgba(0,0,0,0.75) inset; 
+    cursor: default;
+}
+.main-content p {
+    width: 70%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.main-content h2 {
+    color: rgb(242, 163, 102);
+    font-size: 500%;
+    font-weight: 900;
+}
+.main-content h6 {
+    color: rgb(193, 207, 227);
+    font-size: 180%;
+    line-height: 30px;
+    width: 80%;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+button {
+    font-weight: 900;
+    font-size: 16px;
+}
+.button1 {
+    min-width: 120px;
+    position: relative;
+    cursor: pointer;
+    padding: 14px 17px;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    backdrop-filter: blur(15px);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-color: rgb(242, 163, 102);
+    color: #000;
+    margin-right: 15px;
+    transition: all 1s ease-in-out;
+}
+.button1:hover {
+    color: #000;
+}
+.button2 {
+    min-width: 120px;
+    position: relative;
+    cursor: pointer;
+    padding: 14px 17px;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+        ellipse at bottom,
+        rgba(71, 81, 92, 1) 0%,
+        rgba(11, 21, 30, 1) 45%
+    );
+    backdrop-filter: blur(15px);
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+    transition: all 1s ease-in-out;
+}
+.button2:hover {
+    color: rgb(255, 255, 255, 1);
+    opacity: 0.8;
+}
+.explore-content {
+    padding: 10%;
+    background-color: rgba(0, 0, 0, 0.89);
+    cursor: default;
+    background: url('../../../public/Images/Background.jpg')no-repeat;
+    box-shadow: 0px 800px 20px 20px rgba(0,0,0,0.75) inset; 
+}
+.explore-content h1 {
+    color: rgb(242, 163, 102);
+    font-size: 60px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+.explore-content .flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.explore-content .card {
+    padding:150px;
+    width: 100%;
+    border: 1px solid rgb(242, 163, 102);
+    border-radius: 10px;
+    background-color: #000;
+    margin: 20px;
+    background: url('../Images/blackmyth.jpeg');
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    transition: .4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.explore-content .card:last-child {
+    background: url('../Images/oppenheimer.jpg');
+    background-position: center;
+    background-size: cover;
+}
+  
+.card::before,
+.card::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  
+  /* Change the width and height to full, covering the entire card */
+.card:hover::before,
+.card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.1s;
+  }
+  
+  /* First Child */
+.card:hover:after {
+    content: "2024 Best Game Awards";
+    opacity: 1;
+  }
+  /* Second CHild */
+.card:last-child:hover:after {
+    content: "2024 Best Movie Awards";
+    opacity: 1;
+  }
+.newsletter {
+    padding: 10%;
+    background-color: rgb(20, 27, 37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: default;
+}
+.newsletter h2 {
+    font-size: 88px;
+    color: rgb(242, 163, 102);
+    font-weight: 900;
+    
+}
+.newsletter h4 {
+    margin-top: 0;
+    font-size: 800%;
+    font-weight: 0;
+    position: relative;
+    top: -80px;
+}
+.newsletter p {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    line-height: 0.8;
+    font-size: 42px;
+    color: rgb(163, 184, 214);
+}
+.insider-info {
+    margin-right: 10%;
+    position: relative;
+}
+.insider-form {
+    padding: 10%;
+    padding-top: 50px;
+}
+.insider-form input[type=email]{
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid rgb(242, 163, 102);
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+.insider-form input::placeholder {
+    font-size: 20px;
+}
+.insider-form input[type=submit] {
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(242, 163, 102);
+    color: #000;
+    outline: none;
+    border-radius: 10px;
+    font-size: 22px;
+    border: 2px solid rgb(242, 163, 102);
+    cursor: pointer;
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 20px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 10px;
+    }
+    .main-content {
+        padding: 5%;
+        padding-bottom: 100px;
+        box-shadow: none;
+    }
+    .main-content p {
+        width: 100%;
+        font-size: 16px;
+    }
+    .main-content h2 {
+        font-size: 300%;
+    }
+    .explore-content {
+        padding: 5%;
+    }
+    .explore-content .flexbox {
+        flex-wrap: wrap;
+    }
+    .explore-content h1 {
+        font-size: 40px;
+    }
+    .explore-content .card {
+        padding: 100px;
+        margin: 10px 0;
+    }
+    .explore-content h2 {
+        font-size: 24px;
+        padding: 15%;
+    }
+    .newsletter {
+        padding: 5%;
+        flex-direction: column;
+    }
+    .newsletter h2 {
+        font-size: 48px;
+    }
+    .newsletter h4 {
+        font-size: 400%;
+        top: -25px;
+    }
+    .newsletter p {
+        font-size: 24px;
+        top: 100px;
+    }
+    .insider-info {
+        margin-right: 0;
+    }
+    .insider-form {
+        padding: 5%;
+        padding-top: 25px;
+    }
+    .insider-form input[type=email],
+    .insider-form input[type=submit] {
+        padding: 10px;
+        font-size: 16px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    footer img {
+        width: 200px;
+    }
+    footer p {
+        text-align: center;
+    }
+    footer .info-container,
+    footer .link-container {
+        margin: 20px 0;
+    }
+    footer .info-container ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .info-container ul li {
+        margin: 10px 0;
+    }
+    footer .link-container ul li {
+        width: 16%;
+        margin: 10px 10px;
+        gap: 20px;
+    }
+}
