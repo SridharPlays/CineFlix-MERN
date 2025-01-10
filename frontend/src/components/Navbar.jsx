@@ -25,7 +25,7 @@ const Navbar = () => {
           <img
             src={
               user && user.profile
-                ? `http://localhost:5000/${user.profile}`
+                ? user.profile
                 : DefaultAvatar
             }
             alt="User Avatar"
