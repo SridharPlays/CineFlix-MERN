@@ -205,7 +205,7 @@ export const checkAuth = async (req,res) => {
 export const updateUserProfile = async (req, res) => {
     const { name, email } = req.body;
     const profilePath = req.file ? req.file.path.replace(/\\/g, "/") : null;
-  
+    const revisiedPath = process.env.CLIENT_URL + "/" + profilePath;
     try {
       const user = await User.findOne({ email });
       if (!user) {
@@ -213,7 +213,7 @@ export const updateUserProfile = async (req, res) => {
       }
   
       user.name = name || user.name;
-      if (profilePath) user.profile = profilePath;
+      if (profilePath) user.profile = revisiedPath;
   
       await user.save();
       res.status(200).json({ message: 'Profile updated successfully' });

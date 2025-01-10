@@ -119,7 +119,7 @@ const DashboardPage = () => {
           <img
             src={
               user && user.profile
-                ? `http://localhost:5000/${user.profile}`
+                ? user.profile
                 : DefaultAvatar
             }
             alt="Profile Picture"

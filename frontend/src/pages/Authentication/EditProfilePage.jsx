@@ -10,7 +10,8 @@ import toast from 'react-hot-toast'
 const EditProfilePage = () => {
   const { editProfile, user, error, isLoading } = useAuthStore();
   const [profile, setProfile] = useState(null); 
-  const [profilePreview, setProfilePreview] = useState(user.profile ? `http://localhost:5000/${user.profile}` : DefaultAvatar);
+
+  const [profilePreview, setProfilePreview] = useState(user.profile ? user.profile : DefaultAvatar);
   const [name, setName] = useState(user.name);
   const navigate = useNavigate();
 
